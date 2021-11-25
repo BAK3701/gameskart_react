@@ -4,7 +4,7 @@ import Topsellersitems from "./Topsellersitems"
 import { latest } from "../data"
 
 const MainCon = styled.div`
-    background-color: white;
+
 `
 const Container = styled.div`
     display: flex;

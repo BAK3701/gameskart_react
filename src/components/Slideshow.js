@@ -10,6 +10,7 @@ const Slideshows = styled.div`
     width: 100%;
     height: 100vh;
     justify-content: space-around;
+    background-color: #fcd4a9;
 `
 const Slidetitle = styled.h2`
     padding-bottom: 10px;
