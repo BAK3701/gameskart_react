@@ -18,7 +18,6 @@ const Slidetitle = styled.h2`
     width: fit-content;
     position: relative;
     color: #F57738;
-    border-radius: 10px;
     &::after{
         content: '';
         background: #4a4a4a;

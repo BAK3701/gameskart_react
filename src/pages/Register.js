@@ -8,27 +8,52 @@ const Container = styled.div`
     justify-content: center;
 `
 const FormContainer = styled.div`
-    width: 60%;
+    width: 500px;
     padding: 25px;
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 `
 const Title = styled.h2`
-    text-align: center;
+    padding-bottom: 10px;
+    margin: 10px auto;
+    width: fit-content;
+    position: relative;
+    color: #F57738;
+    &::after{
+        content: '';
+        background: #4a4a4a;
+        width: 100px;
+        height: 5px;
+        border-radius: 5px;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%);
+    }
 `
 const Form = styled.form`
     display: flex;
     flex-direction: column;
 `
 const Label = styled.label`
-
+    margin: 10px 0;
+    color: #F57738;
 `
 const Input = styled.input`
-
+    border: 0.5px solid #fcd4a9;
 `
 const Button = styled.button`
+    margin: 30px auto 10px auto;
+    background-color: #4a4a4a;
+    border: none;
+    color: #F57738;
+    padding: 10px;
+    transition: all 0.5s ease;
 
+    &:hover{
+        transform: scale(1.05);
+    }
 `
 
 

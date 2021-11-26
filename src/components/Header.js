@@ -1,27 +1,39 @@
 import './style.css'
 import ShoppingCartRoundedIcon from '@mui/icons-material/ShoppingCartRounded';
 import logo from './images/GamesKart.png'
-import menu_ic from './images/icons8-menu 1.png'
+//import menu_ic from './images/icons8-menu 1.png'
+import { useState } from 'react';
 import styled from "styled-components";
 const Carticon = styled.div`
-    width: fit-content;
-    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
     margin-right: 25px;
     cursor: pointer;
+    transition: all 0.5s ease;
+
+    &:hover{
+        background-color: #F57738;
+    }
 `
 const Header = () => {
-    var prevScrollpos = window.pageYOffset;
-    window.onscroll = function() {
-        var currentScrollPos = window.pageYOffset;
-        if (prevScrollpos > currentScrollPos) {
-            document.getElementById("header").style.top = "0";
-        } else {
-            document.getElementById("header").style.top = "-50px";
+    const [headerScroll, setHeaderScroll] = useState(false)
+    var prevScrolls  = window.scrollY;
+    const scrollsfunc = () => {
+        if(window.scrollY < prevScrolls){
+            setHeaderScroll(false)
         }
-        prevScrollpos = currentScrollPos;
+        else{
+            setHeaderScroll(true)
+        }
+        prevScrolls = window.scrollY
     }
+    window.addEventListener('scroll',scrollsfunc)
     return (
-        <div className = 'header' id="header">
+        <div className = {headerScroll ? "header active" : "header"}>
             <img className = 'header_logo' src={ logo } alt=''/>
             <div className="actual_nav">
                 <nav>
@@ -33,7 +45,6 @@ const Header = () => {
                         <li><a href="/#" className="page">Contact Us</a></li>
                     </ul>
                 </nav>
-                <img className = 'menu_logo' src={ menu_ic } alt="" />
                 <Carticon>
                     <ShoppingCartRoundedIcon style={{fill: '#FFFFFF'}}/>
                 </Carticon>
