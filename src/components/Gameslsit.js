@@ -1,4 +1,4 @@
-
+import { mobile } from "../responsive"
 import styled from "styled-components"
 import { games_page } from '../data'
 import Gamesitems from './Gamesitems'
@@ -11,6 +11,7 @@ const Container = styled.div`
     height: fit-content;
     flex-wrap: wrap;
     margin: auto;
+    ${mobile({ padding : '10px' })};
 `
 
 const Gameslsit = () => {

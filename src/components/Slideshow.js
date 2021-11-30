@@ -34,8 +34,11 @@ const Slidetitle = styled.h2`
 const Slider = styled.div`
     display: flex;
     margin-top: 20px;
-    align-content: center;
+    align-items: center;
     justify-content: space-around;
+    @media only screen and (max-width: 480px) {
+        justify-content: unset;
+    }
 `;
 const Slideimages = styled.div`
     display: flex;
@@ -43,6 +46,9 @@ const Slideimages = styled.div`
     overflow: hidden;
     border-radius: 5px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    @media only screen and (max-width: 480px) {
+        width: 90%;
+    }
 `;
 const Images = styled.img`
     max-width: 100%;
@@ -65,6 +71,7 @@ const Arrow = styled.div`
     &:hover {
         transform: scale(1.05);
     }
+    ${mobile({ height: '26px', width: '26px', margin: '0' })};
 `;
 const Shopnow = styled.button`
     margin: auto;

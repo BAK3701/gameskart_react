@@ -14,7 +14,7 @@ const HeaderDiv = styled.div`
     position: sticky;
     z-index: 100;
     top: ${(props) => props.top};
-    transition: all 0.5s ease;
+    transition: top 0.5s ease;
     border: none;
 `;
 const LogoImage = styled.img`

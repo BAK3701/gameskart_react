@@ -12,7 +12,7 @@ const Container = styled.div`
     height: 30vh;
     display: flex;
     flex-wrap: wrap;
-    ${mobile({ width: '100%' })};
+    ${mobile({ flexDirection: 'column', height: 'fit-content' })};
 `;
 const Download = styled.div`
     display: flex;
@@ -20,6 +20,7 @@ const Download = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    ${mobile({ paddingTop: '20px' })};
 `;
 const Badge = styled.img`
     width: 50%;
@@ -36,7 +37,7 @@ const Comapany = styled.div`
     flex-direction: column;
 `;
 const Logo = styled.img`
-    ${mobile({ width: '100%' })};
+    ${mobile({ width: '80%' })};
 `;
 
 const Social = styled.div`

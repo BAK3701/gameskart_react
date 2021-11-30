@@ -1,4 +1,4 @@
-
+import { mobile } from '../responsive'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 import styled from 'styled-components'
@@ -32,11 +32,13 @@ const Title = styled.h2`
 const Filtercontainer = styled.div`
     display: flex;
     justify-content: space-between;
+    ${mobile({ width: '100vw', flexDirection: 'column'  })};
 `
 const Filter = styled.div`
     display: flex;
     align-items: center;
     margin: 25px;
+    ${mobile({ margin: '20px auto' })};
 `
 const Filtertext = styled.p`
     margin: 0 10px;
@@ -45,7 +47,7 @@ const Filtertext = styled.p`
 `
 const Select = styled.select`
     padding: 5px;
-    border: none;
+    border: 1px solid #4a4a4a;
     color: #F57738;
     background-color: #fcd4a9;
 `
@@ -55,7 +57,7 @@ const Option = styled.option`
 const Games = () => {
     return (
         <Container>
-            <Header />
+            <Header item = 'g'/>
             <Title>Choose your Games</Title>
             <Filtercontainer>
                 <Filter>
