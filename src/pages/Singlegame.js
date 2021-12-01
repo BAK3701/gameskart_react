@@ -3,6 +3,7 @@ import RemoveRoundedIcon from '@mui/icons-material/RemoveRounded';
 import styled from "styled-components"
 import Header from '../components/Header'
 import Footer from "../components/Footer"
+import { mobile } from '../responsive';
 
 const Container = styled.div`
 
@@ -10,6 +11,8 @@ const Container = styled.div`
 const InfoContainer = styled.div`
     display: flex;
     height: 100vh;
+    ${mobile({ flexDirection : 'column' , height: 'fit-content' })}
+
 `
 const ImageContainer = styled.div`
     display: flex;
@@ -25,19 +28,23 @@ const DetailsContainer = styled.div`
     justify-content: space-evenly;
     flex: 1;
     padding: 0 25px;
+    ${mobile({ alignItems : 'center' })}
 `
 const Image = styled.img`
 
 `
 const Title = styled.h1`
     color: #F57738;
+    ${mobile({ margin : '10px 0px' , textAlign : 'center'})}
 `
 const Info = styled.p`
     color: #4a4a4a;
+    ${mobile({ margin : '10px 0px' , textAlign : 'center'})}
 `
 const Price = styled.p`
     font-size: 35px;
     color: #F57738;
+    ${mobile({ margin : '10px 0px' })}
 `
 const Select = styled.select`
     padding: 5px;
@@ -45,6 +52,7 @@ const Select = styled.select`
     color: #F57738;
     background-color: #fcd4a9;
     width: fit-content;
+    ${mobile({ margin : '10px 0px' })}
 `
 const Option = styled.option`
 
@@ -53,9 +61,9 @@ const CartDiv = styled.div`
 
 `
 const Number = styled.div`
-    //background-color: lightblue;
     display: flex;
     align-items: center;
+    ${mobile({ margin : '10px 0px' })}
 `
 const Amount = styled.span`
     color: #4a4a4a;
@@ -76,7 +84,6 @@ const AddSub = styled.div`
     border-radius: 50%;
     cursor: pointer;
     transition: all 0.5s ease;
-
     &:hover{
         transform: scale(1.05);
     }
@@ -92,6 +99,7 @@ const AddCart = styled.button`
     font-size: large;
     font-weight: bold;
     transition: all 0.5s ease;
+    ${mobile({ margin : '10px 0px' })}
 
     &:hover{
         transform: scale(1.05);
@@ -101,7 +109,7 @@ const AddCart = styled.button`
 const Singlegame = () => {
     return (
         <Container>
-            <Header />
+            <Header item = 'g'/>
             <InfoContainer>
                 <ImageContainer>
                     <Image src="images/rdr2.png" alt=""/>

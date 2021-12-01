@@ -78,6 +78,7 @@ const Carticon = styled.div`
     margin-right: 25px;
     cursor: pointer;
     transition: all 0.5s ease;
+    background-color: ${(props) => props.bgreq === props.bg && '#f57738'};
     ${mobile({ marginRight: '10px' })};
 
     &:hover {
@@ -149,7 +150,7 @@ const Header = ({ item }) => {
                         </List>
                     </UnList>
                 </Navi>
-                <Carticon>
+                <Carticon bgreq={item} bg="sc">
                     <ShoppingCartRoundedIcon style={{ fill: '#FFFFFF' }} />
                 </Carticon>
                 <MenuIcon onClick={() => menuOption()}>
